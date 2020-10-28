@@ -11,3 +11,5 @@ echo '<br>';
 $c->deplier();
 echo '<br>';
 $c->laver();
+echo '<br>';
+echo $c::CONSTANTE;
