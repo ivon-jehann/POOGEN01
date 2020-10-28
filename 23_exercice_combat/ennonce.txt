@@ -1,0 +1,14 @@
+• Personnage:
+nom, vie, attaque, defense, attaquer()
+• Arme :
+nom , attaque
+• Armure :
+nom , defense
+
+Deux types de personnages : Magicien et Guerrier
+dans le toString afficher : Nom, vie, attaque, defense, arme, armure
+
+Mise en jeu :
+Afficher Hercule Afficher Merlin
+Hercule attaquer Merlin
+Afficher Hercule Afficher Merlin
