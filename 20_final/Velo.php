@@ -12,14 +12,16 @@ class Velo
     protected $nbVitesses;
     protected $marque;
 
-    public function __construct(string $couleur, int $nbVitesses, string $marque) {
+    public function __construct(string $couleur, int $nbVitesses, string $marque)
+    {
         $this->couleur = $couleur;
         $this->nbVitesses = $nbVitesses;
         $this->marque = $marque;
     }
 
     // pour empecher la surcharge de la méthode dans les classe filles issue de Velo
-    final public function avancer(int $distance): Velo {
+    final public function avancer(int $distance): Velo
+    {
         echo "On a fait $distance km.";
         return $this;
     }
