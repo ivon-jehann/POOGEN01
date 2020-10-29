@@ -8,10 +8,10 @@ function simpleAutoload($fqcn) {
 spl_autoload_register('simpleAutoload');
 
 $action = $_GET['action'] ?? null;
-
-if(!is_null($action)) {
-    $controller = new \Film\FilmController();
+$controller = new \Film\FilmController();
+if(!is_null($action) && method_exists($controller, $action)) {
     call_user_func_array([$controller, $action], []);
 }else{
-    echo "l'action n'est pas définie";
+    require 'Vue/menu.phtml';
+    echo "l'action n'est pas définie.";
 }

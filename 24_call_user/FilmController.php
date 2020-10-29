@@ -15,4 +15,11 @@ class FilmController
         $films = $this->filmModel->list();
         require 'Vue/liste.phtml';
     }
+
+    public function last(): void {
+        $last = $this->filmModel->last();
+        require "Vue/last.phtml";
+    }
+
+    // on pourrait avoir les actions classiques d'un CRUD (create read update delete)
 }
