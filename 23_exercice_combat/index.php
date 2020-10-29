@@ -20,3 +20,7 @@ while ($player1->getVie() >0 && $player2->getVie() > 0) {
 echo $player1->getVie() > $player2->getVie()
     ? "Le vainqueur est le joueur 1"
     : "Le vainqueur est le joueur 2";
+
+echo '<pre>';
+var_dump($player1 instanceof \Combat\Magicien);
+echo '</pre>';

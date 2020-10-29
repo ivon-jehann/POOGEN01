@@ -1,0 +1,9 @@
+<h2>La liste des films</h2>
+<ul>
+
+    <?php
+    foreach ($films as $film) {
+        echo "<li>".$film['id']." ".$film['titre']." ".$film['realisateur']. " ". $film['anneeDeSortie']."</li>";
+    }
+    ?>
+</ul>
