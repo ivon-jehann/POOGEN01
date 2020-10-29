@@ -30,4 +30,16 @@ class FilmController
         header('Location: /26_exercice_pdo/index.php?action=list');
     }
 
+    public function add(): void {
+        if (isset($_POST['add'])) {
+            $titre = $_POST['titre'];
+            $realisateur = $_POST['realisateur'];
+            $anneeDeSortie = $_POST['anneeDeSortie'];
+            $this->filmModel->add($titre, $realisateur, $anneeDeSortie);
+            header('Location: /26_exercice_pdo/index.php?action=list');
+        }else{
+            require 'Vue/add.phtml';
+        }
+    }
+
 }
