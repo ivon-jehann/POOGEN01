@@ -1,0 +1,5 @@
+Reprendre l'exemple du petit mvc précédent et utiliser PDO plutôt que MySQLI
+
+Ajouter des liens pour supprimer un film à partir de la liste
+-> ajout d'une méthode dans le controleur 
+et une autre dans le modèle
