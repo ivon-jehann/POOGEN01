@@ -9,11 +9,16 @@ class FilmModel
     protected $pdo;
 
     public function __construct() {
-        $this->pdo = new \PDO(
-            'mysql:host=localhost;dbname=mediatheque_02',
-            'ivon',
-            'password'
-        );
+        try {
+            $this->pdo = new \PDO(
+                'mysql:host=localhost;dbname=mediatheque_02',
+                'ivonn',
+                'password'
+            );
+        }catch(\Exception $e) {
+            echo "La connexion a échouée".'<br>';
+            echo $e->getMessage();
+        }
     }
 
     public function list() {
