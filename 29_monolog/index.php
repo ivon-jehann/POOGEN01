@@ -6,6 +6,9 @@
  * sinon on peut ajouter la dépendance souhaitée via la commande composer require vendor/project
  *
  * on va en général versionner juste les fichiers composer.json et composer.lock, mais pas le dossier vendor
+ *
+ * on peut aussi utiliser la commande composer update qui va mettre à jour si besoin les dépendances
+ * à utiliser avec précaution sur un projet
  */
 
 // on utilise l'autoloader de composer pour avoir accès aux classes des dépendances

@@ -12,7 +12,7 @@ class FilmModel
         try {
             $this->pdo = new \PDO(
                 'mysql:host=localhost;dbname=mediatheque_02',
-                'ivonn',
+                'ivon',
                 'password'
             );
         }catch(\Exception $e) {
