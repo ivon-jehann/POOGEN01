@@ -1,0 +1,18 @@
+<?php
+include 'Vue/menu.phtml';
+?>
+
+<h2>La liste des films</h2>
+<ul>
+
+    <?php
+    foreach ($films as $film) {
+        echo "<li>".$film['id']." "
+            .$film['titre']." "
+            .$film['realisateur']. " "
+            . $film['anneeDeSortie']
+            . " <a href='/31_exercice_mediatheque/index.php?entity=Film&action=delete&id=".$film['id']."'>supprimer</a>"
+            ."</li>";
+    }
+    ?>
+</ul>

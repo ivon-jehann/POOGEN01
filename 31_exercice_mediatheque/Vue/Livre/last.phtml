@@ -1,0 +1,9 @@
+<?php
+include 'Vue/menu.phtml';
+?>
+<h2>Le dernier livre</h2>
+<p>
+    <?php
+        echo $last['id']." ".$last['titre']. " ". $last['auteur']." ".$last['anneeDeSortie'];
+    ?>
+</p>
