@@ -6,17 +6,18 @@ namespace Mediatheque02\Controller;
 
 use Mediatheque02\Model\LivreModel;
 
-class LivreController
+class LivreController extends AbstractController
 {
     protected $livreModel;
 
     public function __construct() {
+        parent::__construct();
         $this->livreModel = new LivreModel();
     }
 
     public function list(): void {
         $livres = $this->livreModel->list();
-        require 'Vue/Livre/liste.phtml';
+        echo $this->twig->render('Livre/liste.html.twig', ['livres' => $livres]);
     }
 
     public function last(): void {

@@ -8,6 +8,8 @@ function simpleAutoload($fqcn) {
 
 spl_autoload_register('simpleAutoload');
 
+require_once '../vendor/autoload.php';
+
 $entity = $_GET['entity'] ?? null;
 $action = $_GET['action'] ?? null;
 

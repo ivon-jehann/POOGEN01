@@ -4,7 +4,7 @@
 namespace Mediatheque02\Controller;
 
 
-class AppController
+class AppController extends AbstractController
 {
     public function home() {
         require_once 'Vue/App/home.phtml';

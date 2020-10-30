@@ -4,12 +4,13 @@ namespace Mediatheque02\Controller;
 
 use Mediatheque02\Model\FilmModel;
 
-class FilmController
+class FilmController extends AbstractController
 {
 
     protected $filmModel;
 
     public function __construct() {
+        parent::__construct();
         $this->filmModel = new FilmModel();
     }
 

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Liste des livres avec twig
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for livre in livres %}
+            <li>
+                {{ livre.id }} {{ livre.titre }} {{ livre.auteur }} {{ livre.anneeDeSortie }}
+                <a href="/32_mediatheque_twig/index.php?entity=Livre&action=delete&id={{ livre.id }}">supprimer</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
