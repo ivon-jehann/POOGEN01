@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : ven. 30 oct. 2020 à 12:12
+-- Généré le : ven. 30 oct. 2020 à 17:08
 -- Version du serveur :  8.0.22-0ubuntu0.20.04.2
 -- Version de PHP : 7.4.3
 
@@ -66,6 +66,27 @@ INSERT INTO `livre` (`id`, `titre`, `auteur`, `anneeDeSortie`) VALUES
 (1, 'Tom Sayer', 'Mrk Twain', 1876),
 (2, 'Le tour du monde en 80 jours', 'Jules Vernes', 1872);
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `login` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `prenom`, `nom`, `login`, `password`) VALUES
+(3, 'ivon', 'magon', 'admin', 'password');
+
 --
 -- Index pour les tables déchargées
 --
@@ -83,6 +104,13 @@ ALTER TABLE `livre`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `login` (`login`);
+
+--
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -90,12 +118,18 @@ ALTER TABLE `livre`
 -- AUTO_INCREMENT pour la table `film`
 --
 ALTER TABLE `film`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `livre`
 --
 ALTER TABLE `livre`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT pour la table `user`
+--
+ALTER TABLE `user`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
