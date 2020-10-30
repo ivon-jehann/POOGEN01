@@ -20,12 +20,11 @@ if(!is_null($entity) && !is_null($action) ) {
         if (method_exists($controller, $action)) {
             call_user_func_array([$controller, $action], []);
         }else{
-            echo "L'action n'existe pas";
+            header('Location: /31_exercice_mediatheque/index.php?entity=App&action=page404');
         }
     }else{
-        echo "L'entité n'existe pas";
+        header('Location: /31_exercice_mediatheque/index.php?entity=App&action=page404');
     }
 }else{
-    require 'Vue/menu.phtml';
-    echo "l'action n'est pas définie.";
+    header('Location: /31_exercice_mediatheque/index.php?entity=App&action=home');
 }
