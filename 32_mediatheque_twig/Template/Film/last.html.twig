@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le film le plus récent{% endblock %}
+
+{% block content %}
+    {{ film.id }} - {{ film.titre }} - {{ film.realisateur }} - {{ film.anneeDeSortie }}
+{% endblock %}

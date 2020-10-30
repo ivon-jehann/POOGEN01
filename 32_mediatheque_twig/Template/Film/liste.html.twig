@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Liste des films
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for film in films %}
+            <li>
+                {{ film.id }} {{ film.titre }} {{ film.realisateur }} {{ film.anneeDeSortie }}
+                <a href="/32_mediatheque_twig/index.php?entity=Film&action=delete&id={{ film.id }}">supprimer</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

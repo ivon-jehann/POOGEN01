@@ -7,10 +7,10 @@ namespace Mediatheque02\Controller;
 class AppController extends AbstractController
 {
     public function home() {
-        require_once 'Vue/App/home.phtml';
+        echo $this->twig->render('base.html.twig');
     }
 
     public function page404() {
-        require_once 'Vue/App/404.phtml';
+        echo $this->twig->render('page404.html.twig');
     }
 }

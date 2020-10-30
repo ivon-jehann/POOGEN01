@@ -16,12 +16,12 @@ class FilmController extends AbstractController
 
     public function list(): void {
         $films = $this->filmModel->list();
-        require 'Vue/Film/liste.phtml';
+        echo $this->twig->render('Film/liste.html.twig', ['films' => $films]);
     }
 
     public function last(): void {
         $last = $this->filmModel->last();
-        require "Vue/Film/last.phtml";
+        echo $this->twig->render('Film/last.html.twig', ['film' => $last]);
     }
 
     // on pourrait avoir les actions classiques d'un CRUD (create read update delete)
@@ -41,7 +41,7 @@ class FilmController extends AbstractController
             $this->filmModel->add($titre, $realisateur, $anneeDeSortie);
             header('Location: /32_mediatheque_twig/index.php?entity=Film&action=list');
         }else{
-            require 'Vue/Film/add.phtml';
+            echo $this->twig->render('Film/add.html.twig');
         }
     }
 

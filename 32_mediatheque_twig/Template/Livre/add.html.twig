@@ -1,7 +1,12 @@
-<h2>Ajouter un film</h2>
+{% extends 'base.html.twig' %}
+
+{% block title %}<h2>Ajouter un livre</h2>{% endblock %}
+
+{% block content %}
 <form action="" method="post">
     <input type="text" name="titre" placeholder="titre" required><br>
-    <input type="text" name="realisateur" placeholder="réalisateur" required><br>
+    <input type="text" name="auteur" placeholder="auteur" required><br>
     <input type="number" name="anneeDeSortie" required><br>
     <input type="submit" name="add" value="enregistrer">
 </form>
+{% endblock %}

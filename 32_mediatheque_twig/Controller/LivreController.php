@@ -22,7 +22,7 @@ class LivreController extends AbstractController
 
     public function last(): void {
         $last = $this->livreModel->last();
-        require "Vue/Livre/last.phtml";
+        echo $this->twig->render('Livre/last.html.twig', ['livre' => $last]);
     }
 
     // on pourrait avoir les actions classiques d'un CRUD (create read update delete)
@@ -42,7 +42,7 @@ class LivreController extends AbstractController
             $this->livreModel->add($titre, $auteur, $anneeDeSortie);
             header('Location: /32_mediatheque_twig/index.php?entity=Livre&action=list');
         }else{
-            require 'Vue/Livre/add.phtml';
+            echo $this->twig->render('Livre/add.html.twig');
         }
     }
 }

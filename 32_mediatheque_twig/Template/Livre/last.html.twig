@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Livre le plus récent avec twig{% endblock %}
+
+{% block content %}
+    {{ livre.id }} - {{ livre.titre }} - {{ livre.auteur }} - {{ livre.anneeDeSortie }}
+{% endblock %}
