@@ -5,8 +5,14 @@
 </head>
 <body>
 
+{% if session.connected is defined %}
+<div>Bonjour {{ session.connected }}</div>
+{% endif %}
+
 <ul>
     <li><a href="/32_mediatheque_twig/index.php">home</a></li>
+    <li><a href="/32_mediatheque_twig/index.php?entity=User&action=signin">s'inscrire</a></li>
+    <li><a href="/32_mediatheque_twig/index.php?entity=User&action=connexion">se connecter</a></li>
 </ul>
 
 <ul>

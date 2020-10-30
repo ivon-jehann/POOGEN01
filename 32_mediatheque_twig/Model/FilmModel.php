@@ -4,23 +4,8 @@
 namespace Mediatheque02\Model;
 
 
-class FilmModel
+class FilmModel extends AbstractModel
 {
-    protected $pdo;
-
-    public function __construct() {
-        try {
-            $this->pdo = new \PDO(
-                'mysql:host=localhost;dbname=mediatheque_02',
-                'ivon',
-                'password'
-            );
-        }catch(\Exception $e) {
-            echo "La connexion a échouée".'<br>';
-            echo $e->getMessage();
-        }
-    }
-
     public function list() {
         $sql = "SELECT * FROM film";
         $result = $this->pdo->query($sql);

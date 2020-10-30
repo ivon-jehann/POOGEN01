@@ -14,5 +14,6 @@ abstract class AbstractController
     public function __construct() {
         $loader = new FilesystemLoader('Template');
         $this->twig = new Environment($loader);
+        $this->twig->addGlobal('session', $_SESSION);
     }
 }
